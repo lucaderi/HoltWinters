@@ -27,7 +27,7 @@ def initial_seasonal_components(series, slen):
 def triple_exponential_smoothing(series, slen, alpha, beta, gamma, n_preds):
     result = []
     deviation = []
-    
+
     seasonals = initial_seasonal_components(series, slen)
     deviations = seasonals
     for i in range(len(series)+n_preds):
@@ -37,7 +37,7 @@ def triple_exponential_smoothing(series, slen, alpha, beta, gamma, n_preds):
             result.append(series[0])
             deviation.append(0)
             continue
-        
+
         if i >= len(series): # we are forecasting
             m = i - len(series) + 1
             result.append((smooth + m*trend) + seasonals[i%slen])
@@ -52,7 +52,7 @@ def triple_exponential_smoothing(series, slen, alpha, beta, gamma, n_preds):
 
             deviations[i%slen] = gamma*(val-prediction) + (1-gamma)*deviations[i%slen]
             deviation.append(abs(deviations[i%slen]))
-                              
+
     return result,deviation
 
 
@@ -81,3 +81,12 @@ print("Holt-Winters (order %d)" % len(tes))
 print(tes)
 print("")
 print(deviation)
+
+with open('results.csv', 'w') as file:
+    l = len(tes)
+    slen = len(series)
+    file.write(";Series;Prediction;Low Band;High Band\n")
+    for i in range(l):
+        if(i >= slen):
+            series.append(0)
+        file.write(";%.f;%.f;%.f;%.f\n" % (series[i], tes[i], tes[i]-ro*deviation[i], tes[i]+ro*deviation[i]))
