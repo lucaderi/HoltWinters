@@ -13,4 +13,4 @@ This repository contains some code that implements the Holt-Winters forecasting 
 - [Python](https://medium.com/datadriveninvestor/how-to-build-exponential-smoothing-models-using-python-simple-exponential-smoothing-holt-and-da371189e1a1)
 - [Java](https://github.com/nchandra/ExponentialSmoothing)
 - [R](https://github.com/SurajGupta/r-source/blob/master/src/library/stats/R/HoltWinters.R)
-- [Excel][https://www.real-statistics.com/free-download/real-statistics-examples-workbook/)
+- [Excel](https://www.real-statistics.com/free-download/real-statistics-examples-workbook/)
