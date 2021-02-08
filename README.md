@@ -1,5 +1,7 @@
 # Holt-Winters
-This repository contains some code that implements the Holt-Winters forecasting algorithm
+This repository contains some code that implements the Holt-Winters forecasting algorithm.
+
+The [nDPI toolkit](https://github.com/ntop/nDPI) contains an implementation of Holt-Winters with confidence intervals.
 
 # References
 - [Basic Time Series Forecasting](https://www.real-statistics.com/time-series-analysis/basic-time-series-forecasting/)
@@ -8,7 +10,7 @@ This repository contains some code that implements the Holt-Winters forecasting 
 - [Amy Ward, Peter Glynn, and Kathy Richardson, Internet service performance failure detection](https://user.iiasa.ac.at/~marek/stoctr/docs/ward98.pdf)
 - [Holt-Winters Forecasting](https://github.com/KrishnanSG/holt-winters)
 
-# Implementations
+# Additional Implementations
 - [C](https://github.com/pierre/holt-winters)
 - [Python](https://medium.com/datadriveninvestor/how-to-build-exponential-smoothing-models-using-python-simple-exponential-smoothing-holt-and-da371189e1a1)
 - [Java](https://github.com/nchandra/ExponentialSmoothing)
